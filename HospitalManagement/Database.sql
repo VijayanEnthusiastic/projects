@@ -12,7 +12,8 @@ create table patients(
 create table doctors(
 		id INT auto_increment PRIMARY KEY,
         name varchar(100) NOT NULL,
-        department varchar(100) NOT NULL
+        specialization varchar(100) NOT NULL,
+		contact varchar(100) NOT NULL
 ); 
 
 create table appointments(
@@ -23,3 +24,4 @@ create table appointments(
         foreign key (patient_id) REFERENCES patients(id),
         foreign key (doctor_id) REFERENCES doctors(id)
 );
+
